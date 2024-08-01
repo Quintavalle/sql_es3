@@ -1,19 +1,3 @@
-CREATE TABLE Books (
-    book_id INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
-    genre VARCHAR(100),
-    published_year YEAR,
-    isbn VARCHAR(20) UNIQUE NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
-    rating DECIMAL(3, 2),
-    stock_count INT NOT NULL
-);
-
-ALTER TABLE Books
-ADD COLUMN publisher VARCHAR(255),
-ADD COLUMN pages INT;
-
 INSERT INTO Books (title, author, genre, published_year, isbn, price, rating, stock_count, publisher, pages) VALUES
 ('A Journey to the Center', 'Jules Verne', 'Adventure', 1864, '1234567890123', 12.99, 4.5, 10, 'Verne Publishing', 350),
 ('War and Peace', 'Leo Tolstoy', 'Historical', 1869, '1234567890124', 14.99, 4.8, 5, 'Tolstoy Prints', 1200),
